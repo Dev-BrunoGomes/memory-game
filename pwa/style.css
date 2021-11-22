@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.board {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 125px);
+}
+
+.install {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.install:hover,
+.install:active {
+  background-color: RoyalBlue;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d7dbe0"/>
+    <title>Memory Game</title>
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180.png">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="board">
+        
+
+    </div>
+    
+    <script>
+        //REGISTER SERVICE WORKER
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                console.log('loaded')
+            navigator.serviceWorker.register('/service-worker.js')
+            .then((reg) => console.log('ServiceWorker is registered', reg))
+            .catch((err) => console.log('ServiceWorker is not registered', err))
+        })}else{
+            console.log('ServiceWorker is not availabe on the navigator. Do you have https?')
+        }
+    </script>
+</body>
+</html>
